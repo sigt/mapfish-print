@@ -77,6 +77,7 @@ public class LineStringRenderer extends GeometriesRenderer<LineString> {
                 throw new InvalidValueException("strokeDashstyle", dashStyle);
             }
         }
+        dc.setLineJoin(PdfContentByte.LINE_JOIN_ROUND);
     }
 
     protected void renderImpl(RenderingContext context, PdfContentByte dc, PJsonObject style, LineString geometry, AffineTransform affineTransform) {
